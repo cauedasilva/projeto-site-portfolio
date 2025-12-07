@@ -92,7 +92,7 @@ export const ContactSection = () => {
                             </div>
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium">E-mail</label>
-                                <input type="email" id="email" name="email" value={formData.email} required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="cauedasilva.slv@gmail.com" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                                <input type="email" id="email" name="email" value={formData.email} required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="exemplo@gmail.com" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
                             </div>
                             <div>
                                 <label htmlFor="message" className="block mb-2 text-sm font-medium">Mensagem</label>

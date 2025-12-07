@@ -179,6 +179,17 @@
   }
 }
 
+@layer utilities {
+  .animate-fade {
+    animation: fadeIn .4s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;

@@ -1,21 +1,26 @@
 import { useState } from "react"
 import { cn } from "../lib/utils"
+import { FaJsSquare, FaReact, FaNodeJs, FaCss3, FaHtml5, FaGitSquare, FaJava, FaBootstrap } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
+import { SiTypescript, SiExpress, SiMongodb } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandCSharp } from "react-icons/tb";
 
 const skills = [
-    {name: 'JavaScript', level: 'Advanced', category: 'Frontend' },
-    {name: 'React', level: 'Advanced', category: 'Frontend' },
-    {name: 'Node.js', level: 'Intermediate', category: 'Backend' },
-    {name: 'CSS', level: 'Advanced', category: 'Frontend' },
-    {name: 'HTML', level: 'Advanced', category: 'Frontend' },
-    {name: 'Git', level: 'Intermediate', category: 'Tools' },
-    {name: 'Java', level: 'Beginner', category: 'Backend' },
-    {name: 'SQL', level: 'Intermediate', category: 'Backend' },
-    {name: 'TypeScript', level: 'Intermediate', category: 'Frontend' },
-    {name: 'Express.js', level: 'Intermediate', category: 'Backend' },
-    {name: 'Tailwind CSS', level: 'Advanced', category: 'Frontend' },
-    {name: 'Bootstrap', level: 'Advanced', category: 'Frontend' },
-    {name: 'C#', level: 'Beginner', category: 'Backend' },
-    {name: 'MongoDB', level: 'Intermediate', category: 'Backend' },
+    { name: 'JavaScript', level: 'Advanced', category: 'Frontend', icon: FaJsSquare },
+    { name: 'React', level: 'Advanced', category: 'Frontend', icon: FaReact },
+    { name: 'Node.js', level: 'Intermediate', category: 'Backend', icon: FaNodeJs },
+    { name: 'CSS', level: 'Advanced', category: 'Frontend', icon: FaCss3 },
+    { name: 'HTML', level: 'Advanced', category: 'Frontend', icon: FaHtml5 },
+    { name: 'Git', level: 'Intermediate', category: 'Tools', icon: FaGitSquare },
+    { name: 'Java', level: 'Beginner', category: 'Backend', icon: FaJava },
+    { name: 'SQL', level: 'Intermediate', category: 'Backend', icon: DiMysql },
+    { name: 'TypeScript', level: 'Intermediate', category: 'Frontend', icon: SiTypescript },
+    { name: 'Express.js', level: 'Intermediate', category: 'Backend', icon: SiExpress },
+    { name: 'Tailwind CSS', level: 'Advanced', category: 'Frontend', icon: RiTailwindCssFill },
+    { name: 'Bootstrap', level: 'Advanced', category: 'Frontend', icon: FaBootstrap },
+    { name: 'C#', level: 'Beginner', category: 'Backend', icon: TbBrandCSharp },
+    { name: 'MongoDB', level: 'Intermediate', category: 'Backend', icon: SiMongodb },
 ]
 
 const categories = [
@@ -35,9 +40,10 @@ export const SkillsSection = () => {
     return (
         <section id="skills" className="py-20 px-4 bg-secondary/50 relative">
             <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                     Linguagens e <span className="text-primary"> habilidades </span>
                 </h2>
+                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Linguagens e ferramentas que já utilizei e continuo aprendendo</p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {categories.map((category) => (
@@ -52,7 +58,8 @@ export const SkillsSection = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, index) => (
                         <div key={index} className="gradient-border p-6 bg-card rounded-lg shadow-xs card-hover">
-                            <div className="text-left">
+                            <div className="flex items-center gap-3 justify-between">
+                                {skill.icon && (<skill.icon className="text-3xl text-primary" />)}
                                 <h3 className="font-semibold text-lg">{skill.name}</h3>
                             </div>
                         </div>

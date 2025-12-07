@@ -1,16 +1,21 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { NotFound } from "./pages/NotFound"
-import { Home } from "./pages/Home"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Suspense, lazy } from "react"
 import { ThemeProvider } from "./components/ThemeContext"
+import { LoadingBar } from "./components/LoadingBar"
+
+const Home = lazy(() => import("./pages/Home"))
+const NotFound = lazy(() => import("./pages/NotFound"))
 
 function App() {
   return (
     <ThemeProvider>
       <BrowserRouter basename="/site-portfolio">
-        <Routes>
-          <Route index element={<Home />}></Route>
-          <Route path="*" element={<NotFound />}></Route>
-        </Routes>
+        <Suspense fallback={<LoadingBar />}>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </ThemeProvider>
   )

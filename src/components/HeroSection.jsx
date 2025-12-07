@@ -35,8 +35,8 @@ export const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className="animate-fade-in-delay-4 hero-image-container">
-                    <div className="code-display">
+                <div className="hero-image-container">
+                    <div className="code-display shadow-lg">
                         <SyntaxHighlighter language="typescript" customStyle={{ margin: 0, padding: "2rem", height: "100%", borderRadius: "10px", background: "rgba(30, 41, 59)", backdropFilter: "blur(10px)", marginBottom: 50 }} style={vscDarkPlus}>{`
 export class DialogBox implements AfterViewInit {
     @ViewChild('modal') modalElement!: ElementRef;

@@ -5,7 +5,7 @@ const projects = [
         id: 1,
         title: "projeto-shop",
         description: "Um sistema simples de gestão de loja, frontend em Angular e backend em .NET + SQL Server com funcionalidades de CRUD para estoque (produtos) e clientes. ",
-        image: "/projects/projeto-shop.png",
+        image: `${import.meta.env.BASE_URL}projects/projeto-shop.png`,
         tags: ["Angular", "TypeScript", "C#", "ASP.NET", "SQL Server", "HTML", "CSS"],
         githubUrl: "https://github.com/cauedasilva/projeto-shop"
     }
