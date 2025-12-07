@@ -3,27 +3,11 @@ import { ArrowRight, Github } from "lucide-react";
 const projects = [
     {
         id: 1,
-        title: "Projeto 1",
-        description: "Descrição do projeto 1",
-        image: "/projects/tela_final_derrota_tabuleiro.png",
-        tags: ["React"],
-        githubUrl: "#"
-    },
-    {
-        id: 2,
-        title: "Projeto 2",
-        description: "Descrição do projeto 1",
-        image: "/projects/project1.png",
-        tags: ["React", "Node.js"],
-        githubUrl: "#"
-    },
-    {
-        id: 3,
-        title: "Projeto 3",
-        description: "Descrição do projeto 1",
-        image: "/projects/project1.png",
-        tags: ["Git"],
-        githubUrl: "#"
+        title: "projeto-shop",
+        description: "Um sistema simples de gestão de loja, frontend em Angular e backend em .NET + SQL Server com funcionalidades de CRUD para estoque (produtos) e clientes. ",
+        image: "/projects/projeto-shop.png",
+        tags: ["Angular", "TypeScript", "C#", "ASP.NET", "SQL Server", "HTML", "CSS"],
+        githubUrl: "https://github.com/cauedasilva/projeto-shop"
     }
 ]
 
@@ -32,7 +16,7 @@ export const ProjectsSection = () => {
         <section id="projects" className="relative justify-center py-20 px-4">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center"> Meus <span className="text-primary"> projetos </span></h2>
-                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, reiciendis! Molestiae nisi deleniti alias ipsum distinctio repellat, aliquid repudiandae libero repellendus nobis deserunt? Repellendus quam exercitationem quas. Hic, voluptates voluptatem.</p>
+                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Projetos desenvolvidos tanto no meu tempo livre quanto ao longo do curso de Sistemas de Informação na FURB.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-8">
                     {projects.map((project) => (
                         <div key={project.id} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
@@ -59,8 +43,8 @@ export const ProjectsSection = () => {
                 </div>
 
                 <div className="text-center mt-12">
-                    <a href="https://github.com/cauedasilva" target="_blank" className="button w-fit flex justify-center items-center mx-auto gap-2 text-center">
-                        <p className="mb-1 m-0">Acesse o meu perfil no Github</p><ArrowRight size={16}/>
+                    <a href="https://github.com/cauedasilva" target="_blank" className="w-fit flex justify-center items-center mx-auto gap-2 text-center button cta-secondary hover:cta-secondary-hover active:cta-secondary-active before:secondary-before hover:before:secondary-hover-before">
+                        <p className="mb-1 m-0 ">Acesse o meu perfil no Github</p><ArrowRight size={16}/>
                     </a>
                 </div>
             </div>

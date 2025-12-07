@@ -10,11 +10,10 @@ export const AboutSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Lorem ipsum</h3>
-                        <p className="text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum amet asperiores beatae, consequuntur sapiente ad voluptatum harum, rerum quaerat velit est, cum delectus.</p>
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                            <a href="contact" className="button">Contato</a>
-                            <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">Currículo, adicionar curriculo em files e em href</a>
+                        <h3 className="text-2xl font-semibold">Cauê da Silva - {new Date().getFullYear() - 2003} anos</h3>
+                        <p className="text-muted-foreground text-xl">Natural de Pomerode (SC), sou graduando em Sistemas de Informação pela FURB. Tenho grande interesse por tecnologia e por tudo que envolve o digital. Estou sempre em busca de aprender coisas novas, explorar ferramentas, entender tendências e desenvolver minhas habilidades na área de desenvolvimento web.</p>
+                        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center text-center">
+                            <a href="#contact" className="button cta-secondary hover:cta-secondary-hover active:cta-secondary-active before:secondary-before hover:before:secondary-hover-before">Contato</a>
                         </div>
                     </div>
 
@@ -26,7 +25,7 @@ export const AboutSection = () => {
                                 </div>
                                 <div className="text-left">
                                     <h3 className="text-lg font-semibold">Desenvolvimento Web</h3>
-                                    <p className="text-muted-foreground">Criação de sites modernos e responsivos.</p>
+                                    <p className="text-muted-foreground">Meu objetivo é criar sites, aplicações e serviços modernos, responsivos e alinhados às melhores práticas do desenvolvimento web.</p>
                                 </div>
                             </div>
                         </div>
@@ -37,8 +36,8 @@ export const AboutSection = () => {
                                     <User className="h-6 w-6 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <h3 className="text-lg font-semibold">Desenvolvimento Web</h3>
-                                    <p className="text-muted-foreground">Criação de sites modernos e responsivos.</p>
+                                    <h3 className="text-lg font-semibold">Pessoal</h3>
+                                    <p className="text-muted-foreground">Ávido leitor no tempo livre, possuo Inglês C1 e também interessado em infraestrutura de TI e homelabs, configuração de switches, routers, load balancers, firewalls e etc.</p>
                                 </div>
 
                             </div>
@@ -50,8 +49,8 @@ export const AboutSection = () => {
                                     <Briefcase className="h-6 w-6 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <h3 className="text-lg font-semibold">Desenvolvimento Web</h3>
-                                    <p className="text-muted-foreground">Criação de sites modernos e responsivos.</p>
+                                    <h3 className="text-lg font-semibold">Carreira</h3>
+                                    <p className="text-muted-foreground">Atualmente sou analista de suporte técnico na Unifique, onde atuo há quatro anos, acumulando experiência prática em atendimento, diagnóstico e resolução de problemas em ambiente de telecomunicações e infraestrutura de rede.</p>
                                 </div>
                             </div>
 

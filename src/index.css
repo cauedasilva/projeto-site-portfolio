@@ -20,8 +20,11 @@
   --animate-fade-in-delay-4: fade-in 0.7s ease-in-out 0.8s forwards;
   --animate-trail-parallax: trailParallax var(--duration) ease-in-out infinite;
   --animate-trail-parallax-far: trailParallaxFar var(--duration) ease-in-out infinite;
+  --animate-blink: blink 1.5s step-start infinite;
+  --animate-loading: loading 0.8s ease infinite;
 
   @keyframes float {
+
     0%,
     100% {
       transform: translateY(0);
@@ -64,7 +67,7 @@
 
     50% {
       opacity: 1;
-    } 
+    }
 
     70% {
       opacity: 0.75;
@@ -107,12 +110,36 @@
       opacity: 0;
     }
   }
+
+  @keyframes blink {
+
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(250%);
+    }
+  }
 }
 
 @layer base {
   :root {
     --background: 210 40% 98%;
-    --foreground: 240, 10%, 4%;
+    --foreground: 240 10% 4%;
 
     --card: 0 0% 100%;
 
@@ -156,25 +183,99 @@
   margin-inline: auto;
   padding-inline: 2rem;
 
-  @media (width >=640px) {
+  @media (width >= 640px) {
     max-width: 640px;
   }
 
-  @media (width >=768px) {
+  @media (width >= 768px) {
     max-width: 768px;
   }
 
-  @media (width >=1024px) {
+  @media (width >= 1024px) {
     max-width: 1024px;
   }
 
-  @media (width >=1280px) {
+  @media (width >= 1280px) {
     max-width: 1280px;
   }
 
-  @media (width >=1400px) {
+  @media (width >= 1400px) {
     max-width: 1400px;
   }
+}
+
+@utility toast-container {
+  margin-inline: auto;
+}
+
+@utility hero-image-container {
+  @apply relative md:h-96;
+  flex: 1;
+  max-width: 600px;
+  height: fit-content;
+
+  @media (width <= 980px) {
+    display: none;
+  }
+}
+
+@utility code-display {
+  width: 100%;
+
+  @media (width <= 768px) {
+    display: none;
+  }
+}
+
+@utility cta-secondary {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: hsl(var(--foreground));
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid hsl(var(--foreground));
+  backdrop-filter: blur(3px);
+}
+
+@utility cta-secondary-hover {
+  border-color: hsl(var(--background));
+  overflow: hidden;
+  background: hsl(var(--primary), 0.1);
+}
+
+@utility cta-secondary-active {
+  transform: translateY(0);
+  overflow: hidden;
+}
+
+@utility secondary-before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: inherit; 
+
+  background: linear-gradient(90deg,
+      transparent,
+      hsl(var(--background) / 0.6),
+      transparent);
+
+  opacity: 0;
+  transition: left 0.6s ease;
+  clip-path: inset(0 round inherit);
+}
+
+@utility secondary-hover-before {
+  left: 100%;
+  opacity: 0.8;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 @utility text-glow {
@@ -194,7 +295,7 @@
 }
 
 @utility button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:scale-105 active:scale-95;
+  @apply relative overflow-hidden px-4 py-2 text-center justify-center rounded-xl bg-primary text-primary-foreground font-medium transition-colors duration-300;
   --btn-shadow: var(--shadow-glow);
 }
 

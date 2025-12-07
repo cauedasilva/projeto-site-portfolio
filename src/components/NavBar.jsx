@@ -15,6 +15,23 @@ const navItems = [
 export const NavBar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [animateClass, setAnimateClass] = useState('animate-blink');
+    const [text, setText] = useState('');
+    const fullText = '<Cauê /> Portfólio';
+
+    useEffect(() => {
+        let index = 0;
+        const interval = setInterval(() => {
+            setText(fullText.substring(0, index + 1));
+            index++;
+            if (index > fullText.length) {
+                clearInterval(interval);
+                setAnimateClass('opacity-0');
+            }
+        }, 100);
+
+        return () => clearInterval(interval);
+    }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,9 +49,10 @@ export const NavBar = () => {
         <nav className={cn("fixed w-full z-40 transition-all duration-300", isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-md" : "py-5 bg-transparent")}>
             <div className="container flex items-center justify-between">
                 <a className="text-xl font-bold text-primary flex items-center" href="#hero">
-                    <span className="relative z-10">
-                        <span className="text-glow text-foreground">Teste</span> Portfolio
+                    <span className="relative z-10 text-foreground flex items-center">
+                        <span>{String(text)}<span className={animateClass}>|</span> </span>
                     </span>
+                    <div></div>
                 </a>
 
                 <div className="hidden md:flex space-x-8 alin-items-center justify-items-center">

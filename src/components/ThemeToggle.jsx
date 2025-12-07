@@ -11,7 +11,7 @@ export const ThemeToggle = ({ inline = false }) => {
             className={cn(
                 inline
                     ? "rounded-full transition-colors duration-300"
-                    : "fixed top-4 right-4 max-sm:hidden z-50 p-2 rounded-full transition-colors duration-300",
+                    : "max-sm:hidden rounded-full transition-colors duration-300",
                 "focus:outline-hidden cursor-pointer"
             )}
         >
