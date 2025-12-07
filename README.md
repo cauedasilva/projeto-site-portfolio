@@ -1,16 +1,26 @@
-# React + Vite
+# Site Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visão Geral
 
-Currently, two official plugins are available:
+Este repositório contém o código-fonte do meu website de portfólio pessoal, desenvolvido para apresentar meus projetos, habilidades e experiência como desenvolvedor.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O site é uma Single-Page Application (SPA) construída com foco em velocidade, responsividade e uma apresentação visual atraente.
 
-## React Compiler
+## Demonstração ao Vivo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Você pode visualizar a versão ao vivo e em produção do projeto aqui:
 
-## Expanding the ESLint configuration
+[**https://cauedasilva.github.io/site-portfolio**](https://cauedasilva.github.io/site-portfolio)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+***
+
+## Tecnologias e Bibliotecas
+
+Este projeto foi construído utilizando uma stack front-end moderna, aproveitando a velocidade e a eficiência do Vite.
+
+### Tecnologias Principais
+* **JavaScript:** Linguagem principal para toda a lógica e interatividade.
+* **React:** Utilizado para construir a interface de usuário com uma arquitetura baseada em componentes.
+* **Vite:** Usado como ferramenta de build e servidor de desenvolvimento, oferecendo recarregamento rápido (HMR).
+* **HTML5**
+* **CSS3**
