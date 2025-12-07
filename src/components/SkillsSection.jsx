@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { cn } from "../lib/utils"
-import { FaJsSquare, FaReact, FaNodeJs, FaCss3, FaHtml5, FaGitSquare, FaJava, FaBootstrap } from "react-icons/fa";
+import { FaJsSquare, FaReact, FaNodeJs, FaCss3, FaHtml5, FaGitSquare, FaJava, FaBootstrap, FaAngular } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
 import { SiTypescript, SiExpress, SiMongodb } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -21,6 +21,7 @@ const skills = [
     { name: 'Bootstrap', level: 'Advanced', category: 'Frontend', icon: FaBootstrap },
     { name: 'C#', level: 'Beginner', category: 'Backend', icon: TbBrandCSharp },
     { name: 'MongoDB', level: 'Intermediate', category: 'Backend', icon: SiMongodb },
+    { name: 'Angular', level: 'Intermediate', category: 'Frontend', icon: FaAngular }
 ]
 
 const categories = [
