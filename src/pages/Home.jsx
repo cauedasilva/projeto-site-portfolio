@@ -13,7 +13,6 @@ export const Home = () => {
         <NavBar />
         <main>
             <HeroSection />
-            <AboutSection />
             <SkillsSection />
             <ProjectsSection />
             <ContactSection />
