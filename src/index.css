@@ -215,6 +215,11 @@
   }
 }
 
+@utility html-lock {
+  overflow: hidden;
+  height: 100%;
+}
+
 @utility toast-container {
   margin-inline: auto;
 }

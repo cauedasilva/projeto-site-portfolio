@@ -18,7 +18,12 @@ export const Home = () => {
             <ContactSection />
         </main>
         <Footer />
-    </div>
+    </div> 
+
+    
+
+
+
 }
 
 export default Home
