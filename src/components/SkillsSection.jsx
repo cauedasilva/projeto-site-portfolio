@@ -44,7 +44,7 @@ export const SkillsSection = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                     Linguagens e <span className="text-primary"> habilidades </span>
                 </h2>
-                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Linguagens e ferramentas que já utilizei e continuo aprendendo</p>
+                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Linguagens e ferramentas que já utilizei e continuo aprendendo.</p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {categories.map((category) => (
