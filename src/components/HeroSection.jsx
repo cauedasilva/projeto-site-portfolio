@@ -17,7 +17,7 @@ export const HeroSection = () => {
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 font-light">
-                        Estudante de desenvolvimento Web e graduando do curso de Sistemas de Informação na FURB, entusiasta por tecnologia e programação.
+                        Estudante de desenvolvimento Web e graduando do curso de Ciência da Computação na FURB.
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex justify-center items-center">
