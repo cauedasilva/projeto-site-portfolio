@@ -48,7 +48,7 @@ export const ProjectsSection = () => {
             <section id="projects" className="relative justify-center py-20 px-4">
                 <div className="container mx-auto max-w-5xl">
                     <h2 className="text-3xl md:text-4xl font-light mb-4 text-center"> Meus <span className="text-primary"> projetos </span></h2>
-                    <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Projetos desenvolvidos tanto no meu tempo livre quanto ao longo do curso de Sistemas de Informação na FURB.</p>
+                    <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Projetos desenvolvidos tanto no meu tempo livre quanto ao longo do curso de Ciência da Computação na FURB.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-8">
                         {projects.map((project) => (
                             <div key={project.id} className="relative">
