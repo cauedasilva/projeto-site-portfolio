@@ -12,8 +12,6 @@ Você pode visualizar a versão ao vivo e em produção do projeto aqui:
 
 [**https://cauedasilva.github.io/site-portfolio**](https://cauedasilva.github.io/site-portfolio)
 
-***
-
 ## Tecnologias e Bibliotecas
 
 O site foi construído utilizando uma stack front-end em vite.
