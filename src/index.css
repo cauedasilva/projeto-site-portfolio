@@ -28,8 +28,20 @@
       transform: translateY(0);
     }
 
-    80% {
+    20% {
+      transform: translateY(100px);
+    }
+
+    40% {
       transform: translateY(200px);
+    }
+
+    60% {
+      transform: translateY(100px);
+    }
+
+    80% {
+      transform: translateY(250px);
     }
 
     100% {
@@ -39,15 +51,27 @@
 
   @keyframes lineGrow2 {
     0% {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+      transform: translateY(150px) rotate(-20deg);
+    }  
+
+    40% {
+      transform: translateY(50px) rotate(20deg);
+    }
+
+    60% {
+      transform: translateY(100px) rotate(-60deg);
     }
 
     80% {
-      transform: translateY(300px);
+      transform: translateY(200px) rotate(45deg);
     }
 
     100% {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0deg);
     }
   }
 
@@ -56,8 +80,20 @@
       transform: translateY(0);
     }
 
+    20% {
+      transform: translateY(-20px);
+    }
+
+    40% {
+      transform: translateY(-100px);
+    }
+
+    60% {
+      transform: translateY(-120px);
+    }
+
     80% {
-      transform: translateY(-200px);
+      transform: translateY(-180px);
     }
 
     100% {
@@ -67,15 +103,27 @@
 
   @keyframes lineGrowBottom2 {
     0% {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+      transform: translateY(-200px) rotate(15deg);
+    }
+
+    40% {
+      transform: translateY(-80px) rotate(-30deg);
+    }
+
+    60% {
+      transform: translateY(-120px) rotate(45deg);
     }
 
     80% {
-      transform: translateY(-300px);
+      transform: translateY(-250px) rotate(20deg);
     }
 
     100% {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0deg);
     }
   }
 
@@ -465,19 +513,19 @@
 }
 
 @utility line-grow1 {
-  animation: lineGrow1 12s ease-in-out infinite;
+  animation: lineGrow1 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
 }
 
 @utility line-grow2 {
-  animation: lineGrow2 12s ease-in-out infinite;
+  animation: lineGrow2 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
 }
 
 @utility line-grow-bottom1 {
-  animation: lineGrowBottom1 12s ease-in-out infinite;
+  animation: lineGrowBottom1 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
 }
 
 @utility line-grow-bottom2 {
-  animation: lineGrowBottom2 12s ease-in-out infinite;
+  animation: lineGrowBottom2 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
 }
 
 
@@ -554,7 +602,6 @@
   pointer-events: none;
   overflow: hidden;
   border-radius: inherit;
-  z-index: -10;
 
   background: linear-gradient(90deg,
       transparent,
