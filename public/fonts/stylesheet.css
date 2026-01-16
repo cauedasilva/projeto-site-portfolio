@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-Regular.eot');
+    src: local('Method Mono Regular'), local('MethodMono-Regular'),
+        url('MethodMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-Regular.woff2') format('woff2'),
+        url('MethodMono-Regular.woff') format('woff'),
+        url('MethodMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-BoldItalic.eot');
+    src: local('Method Mono Bold Italic'), local('MethodMono-BoldItalic'),
+        url('MethodMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-BoldItalic.woff2') format('woff2'),
+        url('MethodMono-BoldItalic.woff') format('woff'),
+        url('MethodMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-Black.eot');
+    src: local('Method Mono Black'), local('MethodMono-Black'),
+        url('MethodMono-Black.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-Black.woff2') format('woff2'),
+        url('MethodMono-Black.woff') format('woff'),
+        url('MethodMono-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-Bold.eot');
+    src: local('Method Mono Bold'), local('MethodMono-Bold'),
+        url('MethodMono-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-Bold.woff2') format('woff2'),
+        url('MethodMono-Bold.woff') format('woff'),
+        url('MethodMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-BlackItalic.eot');
+    src: local('Method Mono Black Italic'), local('MethodMono-BlackItalic'),
+        url('MethodMono-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-BlackItalic.woff2') format('woff2'),
+        url('MethodMono-BlackItalic.woff') format('woff'),
+        url('MethodMono-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-LightItalic.eot');
+    src: local('Method Mono Light Italic'), local('MethodMono-LightItalic'),
+        url('MethodMono-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-LightItalic.woff2') format('woff2'),
+        url('MethodMono-LightItalic.woff') format('woff'),
+        url('MethodMono-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-Light.eot');
+    src: local('Method Mono Light'), local('MethodMono-Light'),
+        url('MethodMono-Light.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-Light.woff2') format('woff2'),
+        url('MethodMono-Light.woff') format('woff'),
+        url('MethodMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Method Mono';
+    src: url('MethodMono-Italic.eot');
+    src: local('Method Mono Italic'), local('MethodMono-Italic'),
+        url('MethodMono-Italic.eot?#iefix') format('embedded-opentype'),
+        url('MethodMono-Italic.woff2') format('woff2'),
+        url('MethodMono-Italic.woff') format('woff'),
+        url('MethodMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+

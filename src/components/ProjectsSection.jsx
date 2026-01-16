@@ -10,7 +10,7 @@ const projects = [
     {
         id: 1,
         title: "projeto-shop",
-        description: "Um sistema simples de gestão de loja, frontend em Angular e backend em .NET + SQL Server com funcionalidades de CRUD para estoque (produtos) e clientes. ",
+        description: "Um sistema simples de gestão de loja, com funções de CRUD para estoque e clientes. ",
         image: `${import.meta.env.BASE_URL}projects/projeto-shop.png`,
         tags: ["Angular", "TypeScript", "C#", "ASP.NET", "SQL Server", "HTML", "CSS", "Bootstrap"],
         githubUrl: "https://github.com/cauedasilva/projeto-shop",
@@ -36,7 +36,73 @@ const projects = [
         this.onClose.emit(false);
     }
 }`
+    },
+    {
+        id: 2,
+        title: "tracker-assinatura",
+        description: "API RESTful em Node.js com Express e MongoDB, tem como função o controle de assinaturas.",
+        image: `${import.meta.env.BASE_URL}projects/assinatura-tracker.png`,
+        tags: ["JavaScript", "Node", "Express", "MongoDB", "Mongoose", "HTML", "CSS", "JWT", "bcrypt", "Arcjet", "QStash"],
+        githubUrl: "https://github.com/cauedasilva/tracker-assinatura",
+        code: `export const createSubscription = async (req, res, next) => {
+    try {
+        const subscription = await Subscription.create({
+            ...req.body,
+            user: req.user._id,
+        });
+
+        try {
+            await workflowClient.trigger({
+                url: "{SERVER_URL}/api/v1/workflows/subscription/reminder",
+                body: {
+                    subscriptionID: subscription._id
+                },
+                header: {
+                    'content-type': 'application/json'
+                },
+                retries: 0
+            });
+        } catch (workflowError) {
+            console.warn('Workflow trigger failed:', workflowError.message);
+        }
+
+        res.status(201).json({ success: true, data: subscription });
+    } catch (error) {
+        next(error);
     }
+};
+`
+    },
+    {
+        id: 3,
+        title: "ascii-image-converter",
+        description: "Conversor de imagens para ASCII feito em JavaScript puro.",
+        image: `${import.meta.env.BASE_URL}projects/ascii-site.png`,
+        tags: ["JavaScript", "HTML", "CSS"],
+        githubUrl: "https://github.com/cauedasilva/ascii-image-converter",
+        code: `function convertImageDataToASCII(imageData) {
+    const data = imageData.data;
+    const imgW = imageData.width;
+    const imgH = imageData.height;
+
+    let ascii = "";
+
+    for (let y = 0; y < imgH; y++) {
+        let rowIndex = y * imgW * 4;
+
+        for (let x = 0; x < imgW; x++) {
+            const gray = data[rowIndex];
+            ascii += mapGrayToChar(gray);
+            rowIndex += 4;
+        }
+
+        ascii += "\n";
+    }
+
+    return ascii;
+}`
+    }
+
 ]
 
 export const ProjectsSection = () => {
@@ -52,7 +118,7 @@ export const ProjectsSection = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-8">
                         {projects.map((project) => (
                             <div key={project.id} className="relative">
-                                <div className="group bg-card rounded-none overflow-hidden shadow-xs card-hover z-10">
+                                <div className="group bg-card rounded-none overflow-hidden shadow-xs card-hover relative z-10">
                                     <div className="h-1/3 overflow-hidden">
                                         <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                                     </div>
@@ -81,8 +147,12 @@ export const ProjectsSection = () => {
                                     </div>
                                 </div>
 
-                                <div className={cn(isPanelOpen ? "translate-x-0 bg-card" : "-translate-x-full z-0 opacity-0",
-                                    "absolute top-0 left-0 w-full h-full transition-all duration-300 ease overflow-y-auto")}>
+                                <div className={cn(
+                                    isPanelOpen === project.id
+                                        ? "translate-x-0 bg-card z-20"
+                                        : "-translate-x-full opacity-0 z-0",
+                                    "absolute top-0 left-0 w-full h-full transition-all duration-300 ease overflow-y-auto"
+                                )}>
                                     <div className="absolute right-0 z-10">
                                         <X size={24} strokeWidth={1}
                                             onClick={() => setIsPanelOpen(null)}
@@ -91,7 +161,7 @@ export const ProjectsSection = () => {
                                     <div className="h-full overflow-y-auto">
                                         <SyntaxHighlighter language="typescript"
                                             customStyle={{ margin: 0, padding: "2rem", height: "100%", borderRadius: "0", backdropFilter: "blur(10px)", fontSize: "0.85rem" }}
-                                            style={isDarkMode ? materialLight : dracula}>
+                                            style={isDarkMode ? dracula : materialLight}>
                                             {project.code}
                                         </SyntaxHighlighter>
                                     </div>

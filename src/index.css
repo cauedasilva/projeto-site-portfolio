@@ -329,12 +329,20 @@
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-family: "Geist", sans-serif;
+    font-family: "Method", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
     height: 100%;
     width: 100%;
   }
+}
+
+@font-face {
+  font-family: 'Method';
+  src: url('/fonts/MethodMono-Light.woff2') format('woff2'),
+       url('/fonts/MethodMono-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @layer utilities {
