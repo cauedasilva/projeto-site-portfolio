@@ -13,3 +13,21 @@ export const LineArt = () => {
         </div>
     );
 };
+
+export const GrowingLines = () => {
+    return (
+        <div className="growing-line-container overflow-hidden">
+            <div className="flex items-center justify-center w-full h-full">
+
+                <div className="absolute line line-grow1"></div>
+
+                <div className="absolute line line-grow2"></div>
+
+                <div className="absolute line line-grow-bottom1"></div>
+
+                <div className="absolute line line-grow-bottom2"></div>
+
+            </div>
+        </div>
+    );
+};

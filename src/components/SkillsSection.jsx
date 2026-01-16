@@ -21,7 +21,7 @@ const skills = [
     { name: 'Bootstrap', level: 'Advanced', category: 'Frontend', icon: FaBootstrap },
     { name: 'C#', level: 'Beginner', category: 'Backend', icon: TbBrandCSharp },
     { name: 'MongoDB', level: 'Intermediate', category: 'Backend', icon: SiMongodb },
-    { name: 'Angular', level: 'Intermediate', category: 'Frontend', icon: FaAngular }
+    { name: 'Angular', level: 'Intermediate', category: 'Frontend', icon: FaAngular },
 ]
 
 const categories = [
@@ -42,7 +42,7 @@ export const SkillsSection = () => {
         <section id="skills" className="py-20 px-4 bg-secondary/50 relative">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-light mb-4 text-center">
-                    Linguagens e <span className="text-primary"> habilidades </span>
+                    Linguagens e habilidades
                 </h2>
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Linguagens e ferramentas que já utilizei e continuo aprendendo.</p>
 

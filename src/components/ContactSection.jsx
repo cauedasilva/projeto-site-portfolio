@@ -3,6 +3,7 @@ import { cn } from "../lib/utils"
 import { useState } from "react"
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import emailjs from 'emailjs-com';
+import { GrowingLines } from "./LineArt";
 
 export const ContactSection = () => {
     const notify = (alert) => alert ? toast("Mensagem enviada com sucesso!") : toast("Erro ao enviar a mensagem. Tente novamente mais tarde.", {
@@ -23,7 +24,7 @@ export const ContactSection = () => {
     const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text)
             .then(() => toast("Copiado para a área de transferência.", {
-                position: "top-right",
+                position: "bottom-right",
                 autoClose: 3000,
                 hideProgressBar: true,
                 closeOnClick: true,
@@ -31,7 +32,7 @@ export const ContactSection = () => {
                 transition: Slide
             }))
             .catch(() => toast("Erro ao copiar.", {
-                position: "top-right",
+                position: "bottom-right",
                 autoClose: 3000,
                 hideProgressBar: true,
                 closeOnClick: true,
@@ -59,47 +60,51 @@ export const ContactSection = () => {
     }
 
     return (
-        <section id="contact" className="min-h-screen items-center px-6 py-24 bg-secondary">
-            <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-light mb-8 text-center">Entre em <span className="text-primary"> contato </span></h2>
-                <div className="grid grid-cols-1 gap-12">
-                    <div className="space-y-8">
-                        <div className="flex flex-col justify-center align-middle items-center">
-                            <div className="space-y-6 justify-center">
-                                <div className="flex items-center justify-center space-x bg-card p-4 backdrop-blur-xs">
-                                    <div className="flex items-center gap-1 mr-2">
-                                        <Mail className="h-6 w-6 text-primary" strokeWidth={1} />
+        <section id="contact" className="flex justify-center items-center px-6 bg-secondary">
+            <div className="container max-w-6xl mt-6 text-center z-10 flex flex-col md:flex-row items-center justify-center gap-8 mb-14">
+                <div>
+                    <GrowingLines />
+                </div>
+                <div className="container mx-auto max-w-5xl">
+                    <h2 className="text-3xl md:text-4xl font-light text-center p-4">Entre em contato</h2>
+                    <div className="grid grid-cols-1">
+                        <div>
+                            <div className="flex flex-col justify-center align-middle items-center">
+                                <div className="justify-center">
+                                    <div className="flex items-center justify-center space-x p-4 backdrop-blur-xs">
+                                        <div className="flex items-center gap-1 mr-2">
+                                            <Mail className="h-6 w-6" strokeWidth={1} />
+                                        </div>
+                                        <div>
+                                            <a onClick={() => copyToClipboard("cauedasilva.slv@gmail.com")} className="cursor-pointer text-muted-foreground hover:text-primary font-light ">cauedasilva.slv@gmail.com</a>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <a onClick={() => copyToClipboard("cauedasilva.slv@gmail.com")} className="cursor-pointer text-muted-foreground hover:text-primary font-light transition-colors duration-300">cauedasilva.slv@gmail.com</a>
-                                    </div>
-                                </div>
 
-                                <div className="flex items-center space-x bg-card p-4 backdrop-blur-xs">
-                                    <div className="p3 flex items-center justify-center gap-1 mr-2">
-                                        <MapPin className="h-6 w-6 text-primary" strokeWidth={1} />
+                                    <div className="flex items-center justify-center space-x p-4 backdrop-blur-xs">
+                                        <div className="p3 flex items-center justify-center gap-1 mr-2">
+                                            <MapPin className="h-6 w-6" strokeWidth={1} />
+                                        </div>
+                                        <div>
+                                            <a onClick={() => copyToClipboard("cauedasilva.slv@gmail.com")} className="cursor-pointer text-muted-foreground font-light hover:text-primary">Blumenau/Pomerode, SC</a>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <a className="text-muted-foreground font-light hover:text-primary transition-colors duration-300">Blumenau/Pomerode, SC</a>
-                                    </div>
+                                    <ToastContainer className="toast-container" />
                                 </div>
-                                <ToastContainer className="toast-container" />
+                            </div>
+
+                            <div className="pt-0">
+                                <div className="flex space-x-4 justify-center p-4">
+                                    <a className="hover:text-primary" href="https://www.linkedin.com/in/cauedasilva/" target="_blank">
+                                        <Linkedin strokeWidth={1} />
+                                    </a>
+                                    <a className="hover:text-primary" href="https://github.com/cauedasilva" target="_blank">
+                                        <Github strokeWidth={1} />
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="pt-0">
-                            <div className="flex space-x-4 justify-center">
-                                <a href="https://www.linkedin.com/in/cauedasilva/" target="_blank">
-                                    <Linkedin strokeWidth={1} />
-                                </a>
-                                <a href="https://github.com/cauedasilva" target="_blank">
-                                    <Github strokeWidth={1} />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="bg-card p-8 shadow-xs backdrop-blur-xs ">
+                        {/* <div className="bg-card p-8 shadow-xs backdrop-blur-xs ">
                         <h3 className="text-2xl font-light mb-6">Envie uma mensagem</h3>
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
@@ -121,6 +126,8 @@ export const ContactSection = () => {
                             </button>
                             <ToastContainer className="toast-container" />
                         </form>
+                    </div> */}
+
                     </div>
                 </div>
             </div>

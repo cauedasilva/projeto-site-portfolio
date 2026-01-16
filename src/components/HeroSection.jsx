@@ -12,8 +12,6 @@ export const HeroSection = () => {
                 <div className="space-y-6">
                     <h1 className="text-4xl md:text-6xl sm:text-5xl tracking-tight font-light">
                         <span className="opacity-0 animate-fade-in">Bem-vindo</span>
-                        <span className="opacity-0 animate-fade-in-delay-1 ml-2">ao meu</span>
-                        <span className="text-primary opacity-0 animate-fade-in-delay-2 ml-2">portfólio</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 font-light">
@@ -27,10 +25,10 @@ export const HeroSection = () => {
                             </a>
                         </div>
                         <div className="flex space-x-4 justify-center">
-                            <a href="https://www.linkedin.com/in/cauedasilva/" target="_blank">
+                            <a className="hover:text-primary" href="https://www.linkedin.com/in/cauedasilva/" target="_blank">
                                 <Linkedin strokeWidth={1}/>
                             </a>
-                            <a href="https://github.com/cauedasilva" target="_blank">
+                            <a className="hover:text-primary" href="https://github.com/cauedasilva" target="_blank">
                                 <Github strokeWidth={1}/>
                             </a>
                         </div>

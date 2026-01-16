@@ -23,6 +23,62 @@
   --animate-blink: blink 1.5s step-start infinite;
   --animate-loading: loading 0.8s ease infinite;
 
+  @keyframes lineGrow1 {
+    0% {
+      transform: translateY(0);
+    }
+
+    80% {
+      transform: translateY(200px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes lineGrow2 {
+    0% {
+      transform: translateY(0);
+    }
+
+    80% {
+      transform: translateY(300px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes lineGrowBottom1 {
+    0% {
+      transform: translateY(0);
+    }
+
+    80% {
+      transform: translateY(-200px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes lineGrowBottom2 {
+    0% {
+      transform: translateY(0);
+    }
+
+    80% {
+      transform: translateY(-300px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   @keyframes lineVertical {
     0% {
       transform: translateX(0);
@@ -329,20 +385,12 @@
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-family: "Method", sans-serif;
+    font-family: "Geist", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 400;
     height: 100%;
     width: 100%;
   }
-}
-
-@font-face {
-  font-family: 'Method';
-  src: url('/fonts/MethodMono-Light.woff2') format('woff2'),
-       url('/fonts/MethodMono-Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @layer utilities {
@@ -401,7 +449,39 @@
   }
 }
 
-@utility line {
+@utility growing-line-container {
+  width: 35vh;
+  height: 70vh;
+  inset: 0;
+  background: hsl(var(--background));
+  position: relative;
+  border: 1px solid hsl(var(--foreground));
+
+  @media (width <= 768px) {
+    height: 20vh;
+    width: 80vw;
+    margin-bottom: 2rem
+  }
+}
+
+@utility line-grow1 {
+  animation: lineGrow1 12s ease-in-out infinite;
+}
+
+@utility line-grow2 {
+  animation: lineGrow2 12s ease-in-out infinite;
+}
+
+@utility line-grow-bottom1 {
+  animation: lineGrowBottom1 12s ease-in-out infinite;
+}
+
+@utility line-grow-bottom2 {
+  animation: lineGrowBottom2 12s ease-in-out infinite;
+}
+
+
+.line {
   width: 200vw;
   height: 1px;
   background-color: hsl(var(--foreground));
@@ -474,6 +554,7 @@
   pointer-events: none;
   overflow: hidden;
   border-radius: inherit;
+  z-index: -10;
 
   background: linear-gradient(90deg,
       transparent,

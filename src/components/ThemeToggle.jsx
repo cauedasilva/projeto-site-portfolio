@@ -12,7 +12,7 @@ export const ThemeToggle = ({ inline = false }) => {
                 inline
                     ? "rounded-full transition-colors duration-300"
                     : "max-sm:hidden rounded-full transition-colors duration-300",
-                "focus:outline-hidden cursor-pointer"
+                "focus:outline-hidden cursor-pointer hover:text-primary"
             )}
         >
             {isDarkMode ? (

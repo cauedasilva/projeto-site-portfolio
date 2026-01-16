@@ -78,7 +78,7 @@ const projects = [
         title: "ascii-image-converter",
         description: "Conversor de imagens para ASCII feito em JavaScript puro.",
         image: `${import.meta.env.BASE_URL}projects/ascii-site.png`,
-        tags: ["JavaScript", "HTML", "CSS"],
+        tags: ["JavaScript", "HTML", "CSS", "Canvas API"],
         githubUrl: "https://github.com/cauedasilva/ascii-image-converter",
         code: `function convertImageDataToASCII(imageData) {
     const data = imageData.data;
@@ -113,7 +113,7 @@ export const ProjectsSection = () => {
         <>
             <section id="projects" className="relative justify-center py-20 px-4">
                 <div className="container mx-auto max-w-5xl">
-                    <h2 className="text-3xl md:text-4xl font-light mb-4 text-center"> Meus <span className="text-primary"> projetos </span></h2>
+                    <h2 className="text-3xl md:text-4xl font-light mb-4 text-center"> Meus projetos</h2>
                     <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Projetos desenvolvidos tanto no meu tempo livre quanto ao longo do curso de Ciência da Computação na FURB.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-8">
                         {projects.map((project) => (
@@ -156,7 +156,7 @@ export const ProjectsSection = () => {
                                     <div className="absolute right-0 z-10">
                                         <X size={24} strokeWidth={1}
                                             onClick={() => setIsPanelOpen(null)}
-                                            className="text-background cursor-pointer hover:text-primary font-light transition-colors duration-300 text-center m-2" />
+                                            className="text-primary cursor-pointer hover:text-primary font-light transition-colors duration-300 text-center m-2" />
                                     </div>
                                     <div className="h-full overflow-y-auto">
                                         <SyntaxHighlighter language="typescript"
