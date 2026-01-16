@@ -96,7 +96,7 @@ const projects = [
             rowIndex += 4;
         }
 
-        ascii += "\n";
+        ascii += "/n";
     }
 
     return ascii;
@@ -149,9 +149,9 @@ export const ProjectsSection = () => {
 
                                 <div className={cn(
                                     isPanelOpen === project.id
-                                        ? "translate-x-0 bg-card z-20"
-                                        : "-translate-x-full opacity-0 z-0",
-                                    "absolute top-0 left-0 w-full h-full transition-all duration-300 ease overflow-y-auto"
+                                        ? "translate-x-0 bg-card z-20 overflow-auto"
+                                        : "-translate-x-full opacity-0 z-0 overflow-hidden pointer-events-none",
+                                    "absolute top-0 left-0 w-full h-full transition-all duration-300 ease"
                                 )}>
                                     <div className="absolute right-0 z-10">
                                         <X size={24} strokeWidth={1}

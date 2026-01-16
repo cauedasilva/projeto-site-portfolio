@@ -21,7 +21,7 @@ export const GrowingLines = () => {
 
                 <div className="absolute line line-grow1"></div>
 
-                <div className="absolute line line-grow2"></div>
+                <div className="absolute line-vert line-grow2"></div>
 
                 <div className="absolute line line-grow-bottom1"></div>
 

@@ -513,19 +513,19 @@
 }
 
 @utility line-grow1 {
-  animation: lineGrow1 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
+  animation: lineGrow1 12s cubic-bezier(.51,1.05,.21,0.28) infinite;
 }
 
 @utility line-grow2 {
-  animation: lineGrow2 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
+  animation: lineGrow2 12s cubic-bezier(.51,1.05,.21,0.28) infinite;
 }
 
 @utility line-grow-bottom1 {
-  animation: lineGrowBottom1 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
+  animation: lineGrowBottom1 12s cubic-bezier(.51,1.05,.21,0.28) infinite;
 }
 
 @utility line-grow-bottom2 {
-  animation: lineGrowBottom2 12s cubic-bezier(.51,1.05,.21,-0.28) infinite;
+  animation: lineGrowBottom2 12s cubic-bezier(.51,1.05,.21,0.28) infinite;
 }
 
 
